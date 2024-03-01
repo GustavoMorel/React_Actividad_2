@@ -31,16 +31,18 @@ function FilterContacts({ contacts, setFilteredContacts, setNoMatches }) {
 
   // Retornar el JSX del componente FilterContacts
   return (
-    <div>
+    <div className='contenedor-filtro-orig'>
       {/* Input para ingresar el término de búsqueda */}
       <input
+      className='input-filter'
         type="text"
         placeholder="Buscar contacto"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
+      <br/>
       {/* Botón para filtrar los contactos */}
-      <button onClick={filterContacts}>Filtrar</button>
+      <button className='btn' onClick={filterContacts}>Filtrar</button>
     </div>
   );
 }

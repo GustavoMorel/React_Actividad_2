@@ -9,9 +9,9 @@ function ContactList({ contacts, onSelectContact, onDeleteContact }) {
           {contacts.map((contact, index) => (
             <li key={index}>
               {/* Al hacer clic en un contacto, se muestra en los detalles */}
-              <span onClick={() => onSelectContact(contact)}>{contact.nombre} {contact.apellido}</span>
+              <span className='lista_detalle' onClick={() => onSelectContact(contact)}>{contact.nombre} {contact.apellido}</span>
               {/* Botón para eliminar el contacto */}
-              <button onClick={() => onDeleteContact(index)}>Eliminar</button>
+              <button className='btn-eliminar' onClick={() => onDeleteContact(index)}>Eliminar</button>
             </li>
           ))}
         </ul>
